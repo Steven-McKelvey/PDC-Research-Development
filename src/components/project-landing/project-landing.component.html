@@ -1,0 +1,78 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<main>
+    <div class="container">
+        <!-- header information -->
+        <button id="home-button" [routerLink]="['/']">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"/>
+        </button>
+        <h1 id="page-title">{{projectId}}</h1>
+        
+        <!-- tabs for different technologies -->
+        <!-- html for tabs from: https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a & https://www.youtube.com/watch?v=oLqdy95LZSw -->
+        <!-- radio buttons used for tabs (to require minimal javascript) -->
+        <div class="tabs">  
+            <!-- MPI section -->
+             @if (mpiLO != "") {
+                <input type="radio" id="mpi-tab" name="tabs" [formControl]="radioControl" [value]="['mpi-tab']">
+                <label for="mpi-tab">MPI</label>
+                <!-- content for MPI -->
+                <div class="tab">
+                    <h3>MPI</h3>
+                    <p>{{description}}</p>
+                    <h4>Learning Objectives</h4>
+                    <ul>
+                        @for (objective of mpiLO; track $index) {
+                            <li>{{objective}}</li>
+                        }
+                    </ul>
+                    <a target="_blank" [href]="[github]">GitHub</a>
+                </div>
+             }
+            
+
+            <!-- Multithreading section -->
+             @if (mtLO != "") {
+                <input type="radio" id="mt-tab" name="tabs" [formControl]="radioControl" [value]="['mt-tab']">
+                <label for="mt-tab">Multithreading</label>
+                <!-- content for multithreading -->
+                <div class="tab">
+                    <h3>Multithreading</h3>
+                    <p>{{description}}</p>
+                    <h4>Learning Objectives</h4>
+                    <ul>
+                        @for (objective of mtLO; track $index) {
+                            <li>{{objective}}</li>
+                        }
+                    </ul>
+                    <a target="_blank" [href]="[github]">GitHub</a>
+                </div>
+             }
+        
+            <!-- GPU section -->
+             @if (gpuLO != "") {
+                <input type="radio" id="gpu-tab" name="tabs" [formControl]="radioControl" [value]="['gpu-tab']">
+                <label for="gpu-tab">GPU</label>
+                <!-- content for GPU -->
+                <div class="tab">
+                    <h3>GPU</h3>
+                    <p>{{description}}</p>
+                    <h4>Learning Objectives</h4>
+                    <ul>
+                        @for (objective of gpuLO; track $index) {
+                            <li>{{objective}}</li>
+                        }
+                    </ul>
+                    <a target="_blank" [href]="[github]">GitHub</a>
+                </div>
+             }
+            
+            <!-- If nothing has been selected -->
+            @if (this.radioControl.value == null) {
+                <div class="tab" id="default">
+                    <h4>Select A Tab For More Information</h4>
+                </div> 
+            }
+        </div>
+    </div>
+</main>
+<router-outlet />

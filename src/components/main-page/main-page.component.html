@@ -1,0 +1,20 @@
+<main>
+  <!-- header -->
+  <div>
+  <!-- <a [routerLink]="['/']">Home</a> -->
+  <!-- <a>About</a> -->
+  </div>
+
+  <div class="container">
+    <h1 class="title">PDC Assignments</h1>
+    <!-- A list of all the projects -->
+    <div id="project-list">
+      @for (project of projects; track $index) {
+        <!-- pass the project name as a router parameter -->
+        <button class="button" role="button" [routerLink]="['/project-landing/' + project]"><span class="text">{{project}}</span></button>
+      }
+    </div>
+  </div>
+  <!-- <footer>Footer</footer> -->
+</main>
+<router-outlet/>

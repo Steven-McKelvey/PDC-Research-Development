@@ -1,0 +1,135 @@
+{
+    "Circuit Solver": {
+        "description": "This project is used to parallelize a 32-bit version of the 16-bit circuit solving problem from \"Parallel Programming in C with MPI and OpenMP\", by Michael Quinn. The program tests all possible combinations of input values and returns the number of combinations that returned true for a given circuit.",
+        "mpiLearningObjective": [
+            "Use the SPMD and Parallel Loop patterns to solve a problem.", 
+            "Compare a \"chunks\" and \"slices\" approach to the Parallel Loop pattern."
+        ],
+        "mtLearningObjective": [
+            "Use OpenMP's parallel for loop directive to solve a problem.",
+            "Compare a \"chunks\" and \"slices\" approach to the Parallel Loop pattern."
+        ],
+        "gpuLearningObjective": [
+            "Use CUDA in an application to offload work to the GPU."
+        ],
+        "githubLink": "https://github.com/csinparallel/pdc-assignments/tree/main/CircuitSolver"
+    },
+    "Forest Fire Simulator": {
+        "description": "This project uses a parallel Monte Carlo pattern to simulate forest fires. It is used to predict how much of a forest will burn and how fast it will burn based on the likelihood of a fire spreading from one tree to another.",
+        "mpiLearningObjective": [
+            "Use a software model of a real-world problem.",
+            "Use MPI to speed up a sequential model.",
+            "Use the Monte Carlo pattern to solve a problem."
+        ],
+        "mtLearningObjective": [
+            "Use a software model of a real-world problem.",
+            "Use multithreading to speed up a sequential model.",
+            "Use the Monte Carlo pattern to solve a problem."
+        ],
+        "gpuLearningObjective": [
+            "Use a software model of a real-world problem.",
+            "Use GPU offloading to speed up a sequential model.",
+            "Use the Monte Carlo pattern to solve a problem.",
+            "Utilize shared memory on the GPU"
+        ],
+        "githubLink": "https://github.com/csinparallel/pdc-assignments/tree/main/ForestFire"
+    },
+    "GalaxSee Simulator": {
+        "description": "This project simulates the N-body problem and displays the simulation graphically using X11. It calculates the gravitational interactions of \"N\" celestial bodies and displays their resulting movements over a number of iterations.",
+        "mpiLearningObjective": [
+            "Use a software model of a real-world problem.",
+            "Use MPI to speed up a sequential model."
+        ],
+        "mtLearningObjective": [
+            "Use a software model of a real-world problem.",
+            "Use multithreading to speed up a sequential model."
+        ],
+        "gpuLearningObjective": [
+            "Use a software model of a real-world problem.",
+            "Use GPU offloading to speed up a sequential model."
+        ],
+        "githubLink": "https://github.com/csinparallel/pdc-assignments/tree/main"
+    },
+    "Genome Scanner": {
+        "description": "This project searches through a genome for all instances of a particular subsequence. It returns the number of occurrences of that subsequence along with the indices where these occurrences were found.",
+        "mpiLearningObjective": [
+            "Use MPI to speed up a sequential model.",
+            "Use MPI for parallel file I/O."
+        ],
+        "mtLearningObjective": [
+            "Use multithreading to speed up a sequential model.",
+            "Use MPI and multithreading for parallel file I/O."
+        ],
+        "gpuLearningObjective": [
+            "Use GPU offloading to speed up a sequential model.",
+            "Use MPI and multithreading for parallel file I/O.",
+            "Navigate limitations of GPU storage capacity."
+        ],
+        "githubLink": "https://github.com/csinparallel/pdc-assignments/tree/main"
+    },
+    "Image Processing": {
+        "description": "This project involves parallelising processing done on images. It uses the TSGL library to do so, and displays the activity of each thread in real time.",
+        "mpiLearningObjective": [
+
+        ],
+        "mtLearningObjective": [
+            "Use parallelism to speed up a sequential computation.",
+            "Use TSGL to parallelize graphical operations."
+        ],
+        "gpuLearningObjective": [
+
+        ],
+        "githubLink": "https://github.com/csinparallel/pdc-assignments/tree/main/ImageProcessing-TSGL"
+    },
+    "Linear Algebra": {
+        "description": "This project provides parallel versions of several linear algebra (matrix) operations. Particularly, it defines operations for matrix addition, transposition, equality, and multiplication.",
+        "mpiLearningObjective": [
+
+        ],
+        "mtLearningObjective": [
+            "Use multithreading to speed up a sequential computation.",
+            "Compute the speedup and efficiency of a parallel computation."
+        ],
+        "gpuLearningObjective": [
+            "Use GPU offloading to speed up a sequential computation.",
+            "Compute the speedup and efficiency of a parallel computation."
+        ],
+        "githubLink": "https://github.com/csinparallel/pdc-assignments/tree/main/LinearAlgebra"
+    },
+    "Mandelbrot": {
+        "description": "This project computes the Mandelbrot set and displays its corresponding graphic. It uses the TSGL library to do so, and displays the activity of each process/thread in real time.",
+        "mpiLearningObjective": [
+            "Use MPI to speed up a sequential computation.",
+            "Use TSGL to parallelize graphical operations.",
+            "Compare a \"chunks\" and \"slices\" approach to the Parallel Loop pattern.",
+            "Compare different communication patterns (Bcast-Reduction vs Send-Recv).",
+            "Use a Master-Worker paradigm."
+        ],
+        "mtLearningObjective": [
+            "Use multithreading to speed up a sequential computation.",
+            "Use TSGL to parallelize graphical operations.",
+            "Compare a \"chunks\" and \"slices\" approach to the Parallel Loop pattern."
+        ],
+        "gpuLearningObjective": [
+            "Use GPU offloading to speed up a sequential computation.",
+            "Use TSGL to parallelize graphical operations."
+        ],
+        "githubLink": "https://github.com/csinparallel/pdc-assignments/tree/main/Mandelbrot"
+    },
+    "Pin Cracker": {
+        "description": "This project provides parallel solutions to a cybersecurity problem: given the hash of an employee's personal identification number (PIN), retrieve the employee's PIN. The program uses a brute force method of discovering the employee's pin number.",
+        "mpiLearningObjective": [
+            "Use MPI to speed up a sequential computation.",
+            "Use asynchronous MPI communications."
+        ],
+        "mtLearningObjective": [
+            "Use multithreading to speed up a sequential computation.",
+            "Utilize variables shared among threads."
+        ],
+        "gpuLearningObjective": [
+            "Use GPU offloading to speed up a sequential computation.",
+            "Utilize variables stored in device memory."
+        ],
+        "githubLink": "https://github.com/csinparallel/pdc-assignments/tree/main/PinFinder"
+    }
+}
